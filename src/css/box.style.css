@@ -1,0 +1,37 @@
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-container div {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30%;
+  background-color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  width: 8rem;
+  height: 8rem;
+  color: var(--light-blue);
+  transition: all 1s;
+  border: 0.1em solid var(--white);
+
+  &:hover {
+    border-color: var(--dark-blue);
+    transition: 1s;
+  }
+}
+.box-container .center {
+  width: 8rem;
+  height: 8rem;
+  transition: 0.3s;
+  border: 0.1em solid var(--white);
+
+  &:hover {
+    border-color: var(--dark-blue);
+    color: var(--dark-blue);
+  }
+}
