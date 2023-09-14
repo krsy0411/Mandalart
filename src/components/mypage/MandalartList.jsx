@@ -1,7 +1,5 @@
 export const MandalartList = () => {
-    return (
-        <>
-        
-        </>
+    return(
+        <button>목표1</button>
     )
 }
