@@ -62,17 +62,22 @@ p.logo {
     scale: 1.8;
 }
 
-/* 그리드 */
+.container {
+    font-family: "Pretendard-Regular";
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
 
+/* 그리드 */
 .grid-container {
-    width: 55vw;
     height: 80vh;
     font-family: 'Pretendard-Regular';
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
-    row-gap: 0.5rem;
-    column-gap: 0.5rem;
+    row-gap: 1rem;
+    column-gap: 1rem;
 }
 
 .input-style {
@@ -81,4 +86,66 @@ p.logo {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+}
+
+.progress-bar-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+.progress-intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.bar-text {
+    margin-right: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.bar {
+    position: relative;
+    width: 50%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 75px;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    padding: 0 10px; 
+}
+
+.progress-bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #76c7c0; /* 원하는 색상으로 변경 */
+    transition: width 0.5s; /* 부드러운 전환 효과를 위해 */
+}
+
+.progress-bar {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: 'Pretendard-Regular';
+}
+
+.progress-bar p {
+    margin-bottom: 10px;
+    font-weight: bold;
 }
