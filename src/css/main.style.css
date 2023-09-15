@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Russo+One&display=swap');
 
+/* 로고와 아이콘 */
 .nav {
     width: 100%;
     /* 높이 조절 */
-    height: 90px;
+    height: fit-content;
     display: flex;
     /* 세로 중앙 정렬 */
     align-items: center;
@@ -13,9 +14,28 @@
 
 p.logo {
     font-family: var(--russo-one), sans-serif;
-    font-size: 40px;
+    font-size: 50px;
     letter-spacing: 1px;
+
+    &:hover {
+        transition: 1s;
+        color: var(--purple);
+    }
 }
+@keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+}
+.blink {
+    animation: blink-effect 4s linear infinite;
+    /*
+    animation-name: blink-effect;
+    animation-duration: 1s;
+    animation-iteration-count:linear;
+    animation-timing-function:step-end;
+    */
+}  
 
 .user-icon {
     width: 50px;
@@ -25,16 +45,24 @@ p.logo {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+        transition: 1s;
+        background-color: var(--purple);
+    }
 }
 .user-icon i {
     scale: 1.8;
 }
 
+/* 그리드 */
+
 .grid-container {
-    width: 700px;
-    height: 700px;
+    width: 55vw;
+    height: 80vh;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
-    gap: 2rem;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
 }
