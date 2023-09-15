@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 60px;
+}
+
+.input, .main-input, .subtopic-input {
+  font-size: 1.25rem;
+  padding: 10px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 마지막 항목에는 테두리를 제거 */
+.input:last-of-type, 
+.main-input:last-of-type,
+.subtopic-input:last-of-type {
+  border-bottom: none;
+}
+
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subtopic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.save-button {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.2em;
+  background-color: #A8D5BA;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.save-button:hover {
+  background-color: #91C9A7;
+}
