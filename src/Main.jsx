@@ -18,8 +18,13 @@ export const Main = () => {
       </div>
       <div className="grid-container">
         {COLORS.map((COLOR,idx)=> {
+          // 정중앙(센터 of 센터)부분의 경우 : 컬러값 배열로 다 넘기기
+          if(idx === 4) {
+            return (<Box color={COLORS} key={idx}/>)
+          }
+          // 3x3의 나머지 8개의 경우 : 컬러 하나만
           return (
-            <Box order={idx} color={COLOR} key={idx}/>
+            <Box color={COLOR} key={idx}/>
           )
         })}
       </div>

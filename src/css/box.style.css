@@ -7,7 +7,6 @@
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(3,1fr);
-  /* border: 4px solid var(--purple); */
 }
 /* 내부 작은 박스들 */
 .box-container div {
@@ -20,5 +19,5 @@
   /* 폰트 세부 설정 */
   font-weight: 400;
   /* 테두리 설정 */
-  border: 1px dashed var(--grey);
+  border: 0.1px dashed rgb(241, 241, 241);
 }
