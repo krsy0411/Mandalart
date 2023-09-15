@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Russo+One&display=swap');
 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 .nav {
     width: 100%;
     /* 높이 조절 */
@@ -31,10 +38,19 @@ p.logo {
 }
 
 .grid-container {
+    font-family: 'Pretendard-Regular';
     width: 700px;
     height: 700px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
     gap: 2rem;
+}
+
+.input-style {
+    font-size: 1rem;
+    border: none;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }

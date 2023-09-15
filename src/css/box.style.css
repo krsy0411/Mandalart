@@ -2,8 +2,8 @@
 
 /* 3x3에 그리드 설정 */
 .box-container {
-  width: 210px;
-  height: 210px;
+  width: 420px;
+  height: 420px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(3,1fr);
@@ -27,3 +27,9 @@
 /* .box-container .center {
 
 } */
+
+.box.inactive {
+  background-color: black;
+  opacity: 0.3;
+  overflow-wrap: break-word;
+}
