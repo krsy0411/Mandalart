@@ -11,7 +11,7 @@
     font-size: 10px;
     font-family: var(--roboto-mono);
     /* 반시계방향 회전 */
-    rotate: -30deg;
+    rotate: -20deg;
 }
 .success-container p {
     color: red;
