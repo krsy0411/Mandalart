@@ -45,6 +45,7 @@ p.logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
 
     &:hover {
         transition: 1s;

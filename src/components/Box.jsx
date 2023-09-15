@@ -23,7 +23,7 @@ export const Box = ({color}) => {
             </div>
             <div className="sub-center" style={{backgroundColor : color[4]}}>
               {/* 중앙 부분 컬러가 센터 중 센터색인 경우만 white로 폰트색 지정 / 나머지는 검정*/}
-              {color === "#3A4D8F" ? (<i style={{color: "white"}}>중앙</i>) : (<i>중앙</i>)}
+              {color[4] === "#3A4D8F" ? (<i style={{color: "white"}}>중앙</i>) : (<i>중앙</i>)}
             </div>
             <div className="five" style={{backgroundColor: color[5]}}>
               <i>5</i>
@@ -54,8 +54,9 @@ export const Box = ({color}) => {
             <i>4</i>
           </div>
           <div className="sub-center" style={{backgroundColor : color}}>
-            {/* 중앙 부분 컬러가 센터 중 센터색인 경우만 white로 폰트색 지정 / 나머지는 검정*/}
-            {color === "#3A4D8F" ? (<i style={{color: "white"}}>중앙</i>) : (<i>중앙</i>)}
+            {/* 중앙 부분 컬러가 센터 중 센터색인 경우만 white로 폰트색 지정 / 나머지는 검정
+            {color === "#3A4D8F" ? (<i style={{color: "white"}}>중앙</i>) : (<i>중앙</i>)} */}
+            <i>중앙</i>
           </div>
           <div className="five">
             <i>5</i>
