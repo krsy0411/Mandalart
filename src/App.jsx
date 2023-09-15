@@ -6,7 +6,7 @@ import BarsComponent from "./BarsComponent";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<BarsComponent />} />
+      <Route path="/" element={<Main/>} />
     </Routes>
   );
 }
