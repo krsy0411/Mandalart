@@ -64,3 +64,7 @@ hr {
     border: none;
     height: 50px;
 }
+
+.pw-error {
+    border: 1px solid #CA1A1A;;
+}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./css/profile.style.css";
 import logo from './assets/MANDARAT.png';
 import user from './assets/person.png';
@@ -9,6 +9,18 @@ export const Profile = () => {
     const [name,setName]=useState('홍길동');
     const [pw,setPw]=useState("1234");
     const [confirmPw,setConfirmPw]=useState("1234");
+    const [confirmPwUI,setConfirmPwUI]=useState(true);
+
+    useEffect(() => {
+        if(pw !== confirmPw){
+            setConfirmPwUI(false)
+        }
+        else {
+            setConfirmPwUI(true)
+        }
+          // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [pw, confirmPw]   
+)
 
     return (
         <>
@@ -41,7 +53,7 @@ export const Profile = () => {
                         value={pw}/>
 
                 <div className="profile-list">변경된 비밀번호 확인</div>
-                <input className="profile-input" 
+                <input className={`profile-input ${confirmPwUI ? '': 'pw-error'}`} 
                         type="password" 
                         onChange={(e)=>setConfirmPw(e.target.value)} 
                         value={confirmPw}/>
