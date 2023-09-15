@@ -4,7 +4,7 @@ import "../css/box.style.css";
 export const Box = ({ order, color}) => {
 
   return (
-    <div className="box-container">
+    <div className="box-container" style={{border: `4px solid ${color}`}}>
       <div className="one">
         <i>1</i>
       </div>
