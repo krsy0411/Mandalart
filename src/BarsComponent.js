@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Bars from "./Bars";
 import ProgressBar from "./components/ProgressBar";
 
 function BarsComponent() {
@@ -7,7 +8,8 @@ function BarsComponent() {
 
     return (
         <div>
-            <Bars goal="다이어트" completed={ completed } 
+            <Bars 
+            goal="다이어트" completed={ completed }
             goal1="세부1" completed1={ completed }
             goal2="세부2" completed2={ completed } 
             goal3="세부3" completed3={ completed } 
