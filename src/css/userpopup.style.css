@@ -1,0 +1,54 @@
+.mypage-container {
+    width: 197px;
+    height: 292px;;
+    background-color: #FFF;
+    border-radius: 0.5em;
+
+    position: absolute;
+    top: 80px; 
+    right: 20px; 
+    z-index: 9999;
+}
+
+.user .name {
+    margin-top: 15px;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.user .email {
+    margin-top: 10px;
+    font-family: 'Pretendard';
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.mypage-container .a {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    /* border: 2px solid red; */
+    padding-left: 16px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    &:hover {
+        background-color: rgba(102, 102, 102, 0.50);
+    }
+}
+
+.mypage-container .user {
+    text-align: center;
+    height: 130px;
+    padding-top: 30px;
+}
+
+.user img {
+    border-radius: 100%;
+}
+
+.custom-link {
+    color:black;
+}

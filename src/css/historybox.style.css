@@ -1,0 +1,42 @@
+.historybox-container {
+    width: 39.2vw;
+    height: 179px;
+    background-color: #D9D9D9;
+    border-radius: 12px;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 45px;
+}
+
+.year {
+    font-family: 'Pretendard';
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.basic-mandalart {
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.main-mark{
+    color: #CA1A1A;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.sub {
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
