@@ -1,10 +1,13 @@
 @import "reset.css";
 
+/* 모든 프론트에서 공통적으로 사용하는 부분만 여기에 작성합니다 */
 :root {
   --light-blue: #a1caff;
   --dark-blue: #132666;
   --white: #ffffff;
   --black: #000;
+  /* 그리드 안 점선 처리 컬러 */
+  --grey: #C0C0C0;
 }
 
 body {
@@ -15,6 +18,10 @@ body {
   min-height: 100vh;
   /* 유저가 텍스트 드래그하는 기능 막기 */
   user-select: none;
-  padding: 100px;
-  background-color: var(--light-blue);
+  padding: 20px;
+  background-color: var(--white);
+}
+#root {
+  width: 100%;
+  height: 100vh;
 }
