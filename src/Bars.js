@@ -18,10 +18,6 @@ function Bars(props) {
                 <ProgressBar goal={props.goal2} completed={ props.completed2 }/>
                 <ProgressBar goal={props.goal3} completed={ props.completed3 }/>
                 <ProgressBar goal={props.goal4} completed={ props.completed4 }/>
-                <ProgressBar goal={props.goal5} completed={ props.completed1 }/>
-                <ProgressBar goal={props.goal6} completed={ props.completed2 }/>
-                <ProgressBar goal={props.goal7} completed={ props.completed3 }/>
-                <ProgressBar goal={props.goal8} completed={ props.completed4 }/>
             </ul>
         </div>
   );
