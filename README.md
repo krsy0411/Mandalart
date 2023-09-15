@@ -1,3 +1,10 @@
+# 대경권 멋사 해커톤(2023.09.15 - 2023.09.16)
+# 프론트엔드 4명, 백엔드 1명, 기획자 1명
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

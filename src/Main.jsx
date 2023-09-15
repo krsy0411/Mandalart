@@ -42,6 +42,18 @@ export const Main = () => {
     "eight",
   ];
 
+  const COLORS = [
+    "#FCE1DD",
+    "#FAEDDC",
+    "#FDFCE8",
+    "#EBE9E6",
+    "#AEDFF7",
+    "#E9F2DF",
+    "#D8D5EC",
+    "#C7D3EC",
+    "#DCEFFC",
+  ];
+
   useEffect(() => {
     setMainTopicData({
       one: "",
@@ -58,7 +70,7 @@ export const Main = () => {
   return (
     <>
       <div className="nav">
-        <p className="logo">MANDARAT</p>
+        <p className="logo blink">MANDARAT</p>
         <div className="user-icon">
           <a href="{() => false}">
             <i className="fas fa-user"></i>
@@ -73,6 +85,9 @@ export const Main = () => {
                 key={position}
                 centerData={mainTopicData[position]}
                 isActive={mainTopicData[position] !== ""}
+                color={
+                  mainTopicData[position] !== "" ? COLORS[index] : undefined
+                }
               />
             );
           }
@@ -81,7 +96,11 @@ export const Main = () => {
             return (
               <div className="box-container main-box">
                 {positions.map((position, index) => (
-                  <div key={index} className={position}>
+                  <div
+                    key={index}
+                    className={position}
+                    style={{ backgroundColor: COLORS[index] }}
+                  >
                     {isEditing === position ? (
                       <input
                         type="text"
@@ -94,7 +113,6 @@ export const Main = () => {
                         }
                         onBlur={() => handleBlur(position)}
                         className="input-style"
-                        placeholder=""
                       />
                     ) : (
                       <i onClick={() => handleEdit(position)}>
@@ -114,6 +132,7 @@ export const Main = () => {
               key={position}
               centerData={mainTopicData[position]}
               isActive={mainTopicData[position] !== ""}
+              color={mainTopicData[position] !== "" ? COLORS[index] : undefined}
             />
           );
         })}
