@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Russo+One&display=swap');
+
+.nav {
+    width: 100%;
+    /* 높이 조절 */
+    height: 90px;
+    display: flex;
+    /* 세로 중앙 정렬 */
+    align-items: center;
+    /* 좌우 양끝으로 정렬 */
+    justify-content: space-between;
+}
+
+p.logo {
+    font-family: var(--russo-one), sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+.user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-icon i {
+    scale: 1.8;
+}
+
 .grid-container {
     width: 700px;
     height: 700px;

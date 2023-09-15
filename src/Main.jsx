@@ -8,6 +8,14 @@ export const Main = () => {
 
   return (
     <>
+      <div className="nav">
+        <p className="logo">MANDARAT</p>
+          <div className="user-icon">
+            <a href="{() => false}">  
+              <i className="fas fa-user"></i>
+            </a>
+          </div>
+      </div>
       <div className="grid-container">
         <Box />
         <Box />

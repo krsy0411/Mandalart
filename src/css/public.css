@@ -1,4 +1,6 @@
 @import "reset.css";
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Russo+One&display=swap');
 
 /* 모든 프론트에서 공통적으로 사용하는 부분만 여기에 작성합니다 */
 :root {
@@ -8,6 +10,8 @@
   --black: #000;
   /* 그리드 안 점선 처리 컬러 */
   --grey: #C0C0C0;
+  /* font-family: var(--russo-one), sans-serif; */
+  --russo-one: 'Russo One'
 }
 
 body {
