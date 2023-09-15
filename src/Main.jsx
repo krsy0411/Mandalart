@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Box } from "./components/Box";
+// import { Success } from "./components/Success";
+import { EditBtn } from "./components/EditBtn";
 import "./css/main.style.css";
 
 export const Main = () => {
@@ -69,20 +71,24 @@ export const Main = () => {
 
   return (
     <>
+      {/* nav바 영역 */}
       <div className="nav">
         <p className="logo blink">MANDARAT</p>
         <div className="user-icon">
-          <a href="{() => false}">
+          <a href="#!">
             <i className="fas fa-user"></i>
           </a>
         </div>
       </div>
+
       <div className="grid-container">
         {positions.map((position, index) => {
+          // center이전 4개의 값
           if (index < 4) {
             return (
               <Box
-                key={position}
+                key={index}
+                order={position}
                 centerData={mainTopicData[position]}
                 isActive={mainTopicData[position] !== ""}
                 color={
@@ -91,7 +97,7 @@ export const Main = () => {
               />
             );
           }
-
+          // 센터
           if (index === 4) {
             return (
               <div className="box-container main-box">
@@ -126,10 +132,11 @@ export const Main = () => {
               </div>
             );
           }
-
+          // center 이후 4개의 값
           return (
             <Box
               key={position}
+              order={position}
               centerData={mainTopicData[position]}
               isActive={mainTopicData[position] !== ""}
               color={mainTopicData[position] !== "" ? COLORS[index] : undefined}
@@ -137,6 +144,7 @@ export const Main = () => {
           );
         })}
       </div>
+      <EditBtn />
     </>
   );
 };

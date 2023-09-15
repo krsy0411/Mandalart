@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(3,1fr);
+  border: 7px solid var(--dark-blue);
 }
 /* 내부 작은 박스들 */
 .box-container div {

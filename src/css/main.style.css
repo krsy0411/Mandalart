@@ -63,7 +63,6 @@ p.logo {
 }
 
 /* 그리드 */
-
 .grid-container {
     width: 55vw;
     height: 80vh;
@@ -71,8 +70,8 @@ p.logo {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
-    row-gap: 0.5rem;
-    column-gap: 0.5rem;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
 }
 
 .input-style {
