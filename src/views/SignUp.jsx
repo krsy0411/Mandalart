@@ -1,8 +1,33 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./css/signup.style.css";
 import "./css/header.style.css";
 
+
+
 export const SignUp = () => {
+    const navigate = useNavigate();
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+    
+        try {
+            const response = await axios.post("http://27.96.135.222:8080/mandarat/user/add", {
+                email: email,
+                password: pw,
+                name: name,
+            },);
+    
+            console.log(response);
+            alert("회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.");
+            navigate('/');
+        } catch (error) {
+            console.error("회원가입 중 오류 발생:", error);
+            alert("회원가입 중 오류가 발생했습니다. 다시 시도해주세요.");
+        }
+    };
+
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
     const [pw,setPw]=useState("");
@@ -71,7 +96,7 @@ export const SignUp = () => {
                 </div>
 
                 <div className="signup-btn">
-                    <button>회원가입 완료하기</button>
+                    <button onClick={onSubmit}>회원가입 완료하기</button>
                 </div>
             </div>
             <hr/>
