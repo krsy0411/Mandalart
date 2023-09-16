@@ -50,10 +50,10 @@
     display: flex;
     flex-direction: column;
     width: min-content;
-    align-items: flex-end;
+    align-items: flex-start;
     /* 살짝 아래로 내리기 */
     position: relative;
-    top: 45px;
+    top: 2px;
 }
 
 .progress-intro-text {
@@ -62,8 +62,8 @@
     flex-direction: column;
     align-items: center;
     justify-self: center;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    /* 수직 수평 */
+    margin: 20px 0;
     font-size: 23px;
     font-weight: 700;
     line-height: 130%;

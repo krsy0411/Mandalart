@@ -9,7 +9,7 @@ import "./css/app.style.css";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LogIn />}></Route>
+      <Route path="/" element={<LogIn />} />
       <Route path="/main" element={<Main />} />
       <Route path="/history" element={<History />} />
       <Route path="/profile" element={<Profile />} />
