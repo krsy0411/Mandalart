@@ -9,8 +9,9 @@ export const Header = () => {
         
         <>
         <div className="header-header">
-            {/*  로고 */}
-            <Link to="/main"><p className="header-logo">MANDART</p></Link>
+            <Link to="/main">
+                <p className="header-logo">MANDART</p>
+            </Link>
                 <div className="user-icon" onClick={() => {
                     setModalOpen(!modalOpen);
                 }}>
