@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import "./css/profile.style.css";
-import { Header } from "./components/Header";
-// ㅜㅜ
+import "../css/profile.style.css";
+import { Header } from "../components/Header";
 
 export const Profile = () => {
     const [name,setName]=useState('홍길동');

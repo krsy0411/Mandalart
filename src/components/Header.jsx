@@ -2,7 +2,6 @@ import { useState} from "react";
 import { UserPopup } from "../components/UserPopup";
 import { Link } from "react-router-dom";
 import "../css/header.style.css";
-// 
 
 export const Header = () => {
     const [modalOpen, setModalOpen]=useState(false);

@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import { Main } from "./Main";
-import { History } from "./History";
-import { Profile } from "./Profile";
-import { LogIn } from "./LogIn";
+import { Main } from "./views/Main";
+import { History } from "./views/History";
+import { Profile } from "./views/Profile";
+import { LogIn } from "./views/LogIn";
 
 function App() {
   return (
