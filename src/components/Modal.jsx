@@ -44,7 +44,7 @@ function Modal({onClose, maskClosable, closable, visible}) {
 
     return(
         <>
-        <div className="modal-overlay"/>
+        <div className="modal-overlay" visible={visible}/>
         <div 
             className="modal-wrapper"
             onClick={maskClosable ? onMaskClick : null}
