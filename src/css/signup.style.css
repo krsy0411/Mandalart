@@ -1,7 +1,7 @@
 .signup-container {
     width: 70vw;
     height: 800px;
-    background-color: #FAFCFF;
+    background-color: #F6F6F6;
     margin: auto;
 }
 
@@ -29,11 +29,16 @@
 .signup-btn button {
     width: 250px;
     height: 57px;
-    background-color:  #A1CAFE;
+    background-color:  #FFF;
     border-radius: 10.088px;
     font-family: 'Pretendard';
     font-size: 20px;
     font-weight: 500;
+    border: 1px solid black;
+
+    &:hover {
+        background-color:  #A1CAFE;
+    }
 }
 
 .signup-inputbox {
