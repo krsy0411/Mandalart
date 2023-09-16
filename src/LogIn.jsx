@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./css/login.style.css";
-import { Header } from "./components/Header";
+import "./css/header.style.css";
 
 export const LogIn = () => {
     const [email,setEmail]=useState('');
@@ -13,7 +13,9 @@ export const LogIn = () => {
                 background-color: #F6F6F6;
                     }`}
             </style>
-            <Header/>
+            <div className="header-header">
+                <p className="header-logo">MANDARAT</p>
+            </div>
             <div className="login-container">
                 <div className="text">Log In</div>
 
