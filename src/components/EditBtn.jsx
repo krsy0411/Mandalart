@@ -4,7 +4,7 @@ export const EditBtn = ({ btnText, iconId }) => {
   return (
     <>
       <div className="edit-container">
-        <a href="/">
+        <a href="/main">
           <div className="edit-icon-wrapper">
             <i className={`fas fa-${iconId}`}></i>
           </div>
