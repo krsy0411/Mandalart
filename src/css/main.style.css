@@ -7,30 +7,6 @@
     font-style: normal;
 }
 
-.nav {
-    width: 100%;
-    /* 높이 조절 */
-    height: fit-content;
-    display: flex;
-    /* 세로 중앙 정렬 */
-    align-items: center;
-    /* 좌우 양끝으로 정렬 */
-    justify-content: space-between;
-}
-
-p.logo {
-    font-family: var(--russo-one), sans-serif;
-    font-size: 50px;
-    letter-spacing: 1px;
-    margin-right: 20vw;
-    color: var(--dark-blue);
-
-    &:hover {
-        transition: 1s;
-        color: var(--purple);
-    }
-}
-
 .user-icon {
     width: 50px;
     height: 50px;
@@ -49,7 +25,7 @@ p.logo {
 .user-icon i {
     scale: 1.8;
 }
-
+/* 오른쪽-왼쪽 판 설정 */
 .container {
     font-family: "Pretendard-Regular";
     /* 메인의 오른쪽과 왼쪽 가로방향 배치 */
@@ -63,6 +39,7 @@ p.logo {
     height: inherit;
     /* header영역 아래 grid-container 쌓이게끔 배치 */
     flex-direction: column;
+    align-items: end;
     position: relative;
     top: 0px;
 }
@@ -97,7 +74,7 @@ p.logo {
 .progress-bar-container-wrapper {
     display: flex;
     flex-direction: column;
-    width: 450px;
+    width: min-content;
     align-items: end;
     /* 살짝 아래로 내리기 */
     position: relative;
@@ -112,6 +89,8 @@ p.logo {
     justify-self: center;
     margin-top: 20px;
     margin-bottom: 35px;
+    font-size: 23px;
+    font-weight: 700;
 }
 
 .bar-text {
@@ -133,6 +112,7 @@ p.logo {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    width: 30vw;
     height: 75px;
     border-radius: 40px;
     overflow: hidden;
@@ -146,8 +126,8 @@ p.logo {
     top: 0;
     left: 0;
     height: 100%;
-    background-color: #76c7c0; /* 원하는 색상으로 변경 */
-    transition: width 0.5s; /* 부드러운 전환 효과를 위해 */
+    background-color: var(--dark-blue); /* 원하는 색상으로 변경 */
+    transition: width 1.5s; /* 부드러운 전환 효과를 위해 */
 }
 
 .progress-bar {

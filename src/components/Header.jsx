@@ -1,8 +1,7 @@
 import { useState} from "react";
-import logo from '../assets/MANDARAT.png';
-import user from '../assets/person.png';
 import { UserPopup } from "../components/UserPopup";
 import { Link } from "react-router-dom";
+import "../css/header.style.css";
 
 
 export const Header = () => {
@@ -10,10 +9,18 @@ export const Header = () => {
     return (
         
         <>
-        <div className="header" style={{marginBottom:"50px"}}>
-                <Link to='/'><img className='logo' src={logo} alt="logo"/></Link>
-                <img className='user-icon' src={user} alt="user"  onClick={()=>setModalOpen(!modalOpen)}/>
+        <div className="header-header">
+            {/*  로고 */}
+            <p className="header-logo">MANDARAT</p>
+            <Link to="/">
+                <div className="user-icon" onClick={() => {
+                    setModalOpen(!modalOpen);
+                }}>
+                    <i className="fas fa-user"></i>
+                </div>
+            </Link>
         </div>
+            {/* 모달이 열릴 경우 UserPopup 활성화 */}
             {modalOpen && <UserPopup value={modalOpen}/>}
         </>
     )

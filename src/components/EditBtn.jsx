@@ -8,7 +8,7 @@ export const EditBtn = () => {
                     <div className="edit-icon-wrapper">
                         <i className="fas fa-pen"></i>
                     </div>
-                    <p className="edit-p">만다라트 편집하기</p>
+                    <p className="edit-p">현재 만다라트 초기화</p>
                 </a>
             </div>
         </>

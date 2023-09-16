@@ -1,0 +1,30 @@
+.header-header {
+    /* 크기 지정 */
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 수평 좌우 안쪽 여백 주기 */
+    background-color: var(--dark-blue);
+    /* 헤더와 본문의 간격 주기 */
+    margin-bottom: 30px;
+    /* 수직 수평 */
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.header-header .header-logo {
+    font-family: var(--russo-one), sans-serif;
+    font-size: 55px;
+    letter-spacing: 1px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        transition: 1s;
+        color: var(--purple);
+    }
+}

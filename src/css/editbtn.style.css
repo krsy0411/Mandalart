@@ -4,6 +4,8 @@
     top: 80px;
     left: 42vw;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.184);
+    transition: all 1s;
+    margin-bottom: 10px;
 }
 
 .edit-container a {

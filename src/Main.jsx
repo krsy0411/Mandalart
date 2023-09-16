@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Box } from "./components/Box";
 import "./css/main.style.css";
 import { EditBtn } from "./components/EditBtn";
+import { Header } from "./components/Header";
 
 export const Main = () => {
   const [mainTopicData, setMainTopicData] = useState({
@@ -71,15 +72,13 @@ export const Main = () => {
   return (
     <>
       {/* top: navbar section */}
-      <div className="nav">
-      </div>
+      <Header />
 
       <div className="container">
         {/* 메인의 오른쪽 판 */}
         <div className="right-pane">
           {/* 메인의 오른쪽 헤더 영역 */}
           <div className="right-pane-header">
-            <p className="logo">MANDARAT</p>
             <EditBtn />
           </div>
           {/* left: grid-container section */}
@@ -149,11 +148,6 @@ export const Main = () => {
 
         {/* right: progress-bar section */}
         <div className="progress-bar-container-wrapper">
-          <div className="user-icon">
-            <a href="{() => false}">
-              <i className="fas fa-user"></i>
-            </a>
-          </div>
           <div className="progress-intro-text">
             준혁님의 목표 달성률이에요. 조금만 더 힘내봐요 💪🏻
           </div>
@@ -170,7 +164,7 @@ export const Main = () => {
                   ></div>
                 </div>
               </div>
-            ) : null
+            ) : null // 마지막 인덱스는 null 처리
           )}
         </div>
       </div>

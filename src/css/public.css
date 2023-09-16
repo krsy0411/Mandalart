@@ -26,6 +26,7 @@ body {
   /* 유저가 텍스트 드래그하는 기능 막기 */
   user-select: none;
   background-color: var(--white);
+  margin: 0;
 }
 #root {
   width: 100%;
