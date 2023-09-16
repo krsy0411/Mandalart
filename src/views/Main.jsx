@@ -4,7 +4,6 @@ import "../css/main.style.css";
 import { EditBtn } from "../components/EditBtn";
 import { Header } from "../components/Header";
 import Modal from "../components/Modal";
-import { Edit } from "@mui/icons-material";
 
 export const Main = () => {
   const [mainTopicData, setMainTopicData] = useState({
