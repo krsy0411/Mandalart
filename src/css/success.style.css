@@ -1,0 +1,18 @@
+.success-container {
+    /* 너비 지정 */
+    width: 45px;
+    height: 15px;
+    /* 폰트 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid red;
+    /* 내부 폰트 지정 */
+    font-size: 10px;
+    font-family: var(--roboto-mono);
+    /* 반시계방향 회전 */
+    rotate: -20deg;
+}
+.success-container p {
+    color: red;
+}

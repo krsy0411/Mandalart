@@ -1,0 +1,19 @@
+.history-container {
+    width: 39.2vw;
+    margin: auto;
+}
+
+.my {
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 75px;
+ }
+
+ hr {
+    color: #F6F6F6;
+    border: none;
+    height: 50px;
+}

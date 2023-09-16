@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { Box } from "./components/Box";
 import "./css/main.style.css";
+import { EditBtn } from "./components/EditBtn";
+import { Header } from "./components/Header";
 
 export const Main = () => {
   const [mainTopicData, setMainTopicData] = useState({
@@ -13,7 +15,6 @@ export const Main = () => {
     seven: "",
     eight: "",
   });
-
   const [isEditing, setIsEditing] = useState(null);
   const [tempData, setTempData] = useState({});
 
@@ -94,71 +95,71 @@ export const Main = () => {
   return (
     <>
       {/* top: navbar section */}
-      <div className="nav">
-        <p className="logo blink">MANDARAT</p>
-        <div className="user-icon">
-          <a href="{() => false}">
-            <i className="fas fa-user"></i>
-          </a>
-        </div>
-      </div>
+      <Header />
 
       <div className="container">
-        {/* left: grid-container section */}
-        <div className="grid-container">
-          {positions.map((position, index) => {
-            if (index !== 4) {
-              return (
-                <Box
-                  key={position}
-                  centerData={mainTopicData[position]}
-                  isActive={mainTopicData[position] !== ""}
-                  color={
-                    mainTopicData[position] !== "" ? COLORS[index] : undefined
-                  }
-                  onProgressUpdate={(position, progress) =>
-                    handleProgressUpdate(position, progress)
-                  }
-                  position={position}
-                />
-              );
-            }
+        {/* 메인의 오른쪽 판 */}
+        <div className="right-pane">
+          {/* 메인의 오른쪽 헤더 영역 */}
+          <div className="right-pane-header">
+            <EditBtn />
+          </div>
+          {/* left: grid-container section */}
+          <div className="grid-container">
+            {positions.map((position, index) => {
+              if (index !== 4) {
+                return (
+                  <Box
+                    key={position}
+                    centerData={mainTopicData[position]}
+                    isActive={mainTopicData[position] !== ""}
+                    color={
+                      mainTopicData[position] !== "" ? COLORS[index] : undefined
+                    }
+                    onProgressUpdate={(position, progress) =>
+                      handleProgressUpdate(position, progress)
+                    }
+                    position={position}
+                  />
+                );
+              }
 
-            if (index === 4) {
-              return (
-                <div className="box-container main-box">
-                  {positions.map((position, index) => (
-                    <div
-                      key={index}
-                      className={position}
-                      style={{ backgroundColor: COLORS[index] }}
-                    >
-                      {isEditing === position ? (
-                        <input
-                          type="text"
-                          value={tempData[position] ?? ""}
-                          onChange={(e) =>
-                            setTempData((prev) => ({
-                              ...prev,
-                              [position]: e.target.value,
-                            }))
-                          }
-                          onBlur={() => handleBlur(position)}
-                          className="input-style"
-                        />
-                      ) : (
-                        <i onClick={() => handleEdit(position)}>
-                          {tempData[position] || (
-                            <span style={{ color: "#888" }}>데이터 입력</span>
-                          )}
-                        </i>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              );
-            }
-          })}
+              if (index === 4) {
+                return (
+                  <div className="box-container main-box">
+                    {positions.map((position, index) => (
+                      <div
+                        key={index}
+                        className={position}
+                        style={{ backgroundColor: COLORS[index] }}
+                      >
+                        {isEditing === position ? (
+                          <input
+                            type="text"
+                            value={tempData[position] ?? ""}
+                            onChange={(e) =>
+                              setTempData((prev) => ({
+                                ...prev,
+                                [position]: e.target.value,
+                              }))
+                            }
+                            onBlur={() => handleBlur(position)}
+                            className="input-style"
+                          />
+                        ) : (
+                          <i onClick={() => handleEdit(position)}>
+                            {tempData[position] || (
+                              <span style={{ color: "#888" }}>데이터 입력</span>
+                            )}
+                          </i>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+            })}
+          </div>
         </div>
 
         {/* right: progress-bar section */}

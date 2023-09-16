@@ -1,0 +1,33 @@
+.edit-container {
+    width: 15vw;
+    height: min-content;
+    top: 80px;
+    left: 42vw;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.184);
+    transition: all 1s;
+    margin-bottom: 10px;
+}
+
+.edit-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.edit-icon-wrapper {
+    width: min-content;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.7vw;
+}
+.edit-icon-wrapper i{
+    font-size: 21px;
+    color: var(--dark-blue);
+}
+p.edit-p {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
