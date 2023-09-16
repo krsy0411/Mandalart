@@ -3,11 +3,10 @@
     height: 292px;;
     background-color: #FFF;
     border-radius: 0.5em;
-    border: 2px solid var(--text, #332B3A);
 
     position: absolute;
-    top: 105px; 
-    right: 95px; 
+    top: 80px; 
+    right: 90px; 
     z-index: 9999;
 }
 /*  */
