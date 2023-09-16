@@ -122,7 +122,7 @@ export const Main = () => {
           {/* 메인의 오른쪽 헤더 영역 */}
           <div className="right-pane-header">
             <EditBtn btnText="데이터 저장" iconId="floppy-disk" />
-            <EditBtn btnText="현재 만다라트 초기화" iconId="pen" />
+            <EditBtn btnText="현재 만다라트 초기화" iconId="trash-can" />
           </div>
           {/* left: grid-container section */}
           <div className="grid-container">
