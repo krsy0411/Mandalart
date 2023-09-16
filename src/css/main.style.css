@@ -55,12 +55,18 @@
     position: relative;
     top: 2px;
 }
+.main-or-sub {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 
 .progress-intro-text {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-self: center;
     /* 수직 수평 */
     margin: 20px 0;
@@ -99,6 +105,7 @@
     width: 20%;
     text-align: center;
     font-size: 0.9rem;
+    font-weight: 800;
     color: #333;
 }
 
@@ -115,6 +122,8 @@
 .percentage {
     width: 10%;
     text-align: center;
+    font-size: 0.9rem;
+    font-weight: 800;
 }
 
 .progress-bar {

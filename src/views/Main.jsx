@@ -191,7 +191,29 @@ export const Main = () => {
         {/* right: progress-bar section */}
         <div className="progress-bar-container-wrapper">
           <div className="main-or-sub">
-            {isMain ? <EditBtn btnText="중간 목표" iconId="fire"/> : <EditBtn btnText="세부 목표" iconId="fire"/>}
+            {isMain ? (
+              <>
+                <div className="edit-container" onClick={() => {setIsMain(!isMain)}}>
+                  <div className="edit-icon-wrapper-container">
+                    <div className="edit-icon-wrapper">
+                        <i className='fas fa-fire'></i>
+                    </div>
+                    <p className="edit-p">세부 목표</p>
+                  </div>
+                </div>  
+              </>
+            ) : (
+              <>
+                <div className="edit-container" onClick={() => {setIsMain(!isMain)}}>
+                  <div className="edit-icon-wrapper-container">
+                    <div className="edit-icon-wrapper">
+                        <i className='fas fa-fire'></i>
+                    </div>
+                    <p className="edit-p">중간 목표</p>
+                  </div>
+                </div>  
+              </>
+            )}
           </div>
           <div className="progress-intro-text">
             준혁님의{" "}
