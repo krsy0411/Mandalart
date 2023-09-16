@@ -9,7 +9,7 @@ function App() {
       <Route path="/" element={<Main />} />
       <Route path="/history" element={<History/>}/>
       <Route path="/profile" element={<Profile/>}/>
-    </Routes>
+    </Routes> 
   );
 }
 

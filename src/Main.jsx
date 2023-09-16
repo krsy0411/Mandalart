@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Box } from "./components/Box";
 import "./css/main.style.css";
 import { EditBtn } from "./components/EditBtn";
+import Modal from "./components/Modal";
 
 export const Main = () => {
   const [mainTopicData, setMainTopicData] = useState({
@@ -16,6 +17,11 @@ export const Main = () => {
   });
   const [isEditing, setIsEditing] = useState(null);
   const [tempData, setTempData] = useState({});
+  const [modalVisible, setModalVisible] = useState(true)
+
+  const closeModal = () => {
+        setModalVisible(false)
+  }
 
   const handleDataChange = (position, data) => {
     setMainTopicData((prev) => ({ ...prev, [position]: data }));
@@ -70,6 +76,12 @@ export const Main = () => {
 
   return (
     <>
+      <div>
+            {modalVisible && (
+                <Modal visible={modalVisible} closable={true} maskClosable={true} onClose={closeModal}></Modal>
+            )}
+      </div>
+
       {/* top: navbar section */}
       <div className="nav">
       </div>
