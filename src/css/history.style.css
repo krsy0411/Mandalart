@@ -3,6 +3,29 @@
     margin: auto;
 }
 
+.history-add {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.history-add button {
+    width: 25vw;
+    height: 70px;
+    background-color: #FFF;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6vw;
+
+    &:hover {
+        background-color: #3A4D8F;
+        color: #FFF;
+    }
+}
+
 .my {
     text-align: center;
     font-family: 'Pretendard';

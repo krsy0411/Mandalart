@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../css/signup.style.css";
 import "../css/header.style.css";
-import host from "../settings/host";
 
 export const SignUp = () => {
   const navigate = useNavigate();
@@ -12,15 +11,14 @@ export const SignUp = () => {
     event.preventDefault();
 
     try {
-      const response = await axios
-        .create({
-          baseURL: host,
-        })
-        .post("http://27.96.135.222:8080/mandarat/user/add", {
+      const response = await axios.post(
+        "https://27.96.135.222:443/mandarat/user/add",
+        {
           email: email,
-          password: pw,
+          passwd: pw,
           name: name,
-        });
+        }
+      );
 
       console.log(response);
       alert("회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.");
