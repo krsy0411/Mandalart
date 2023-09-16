@@ -25,7 +25,7 @@
 
     &:hover {
         transition: 1s;
-        color: var(--purple);
+        color: #A1CAFE;
     }
 }
 .user-icon {
