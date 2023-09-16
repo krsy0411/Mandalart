@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { Box } from "./components/Box";
 import "./css/main.style.css";
 import { EditBtn } from "./components/EditBtn";
@@ -15,6 +15,16 @@ export const Main = () => {
     seven: "",
     eight: "",
   });
+  const [isClicked, setIsClicked] = useState({
+    one: false,
+    two: false,
+    three: false,
+    four: false,
+    five: false,
+    six: false,
+    seven: false,
+    eight: false,
+  })
   const [isEditing, setIsEditing] = useState(null);
   const [tempData, setTempData] = useState({});
 
@@ -167,9 +177,13 @@ export const Main = () => {
           <div className="progress-intro-text">
             준혁님의 목표 달성률이에요. 조금만 더 힘내봐요 💪🏻
           </div>
+          {/* key값은  mainTopicData(대분류 하나 + 중분류 8개) index는 0-8*/}
           {Object.keys(mainTopicData).map((key, index) =>
             index !== 8 ? (
-              <div key={index} className="progress-bar-container">
+              <div key={index} className="progress-bar-container" onClick={() => {
+                // 클릭 여부 변경
+                isClicked[index] = !isClicked[index];
+              }}>
                 <span className="bar-text">
                   {mainTopicData[key] || "데이터 없음"}
                 </span>
@@ -184,6 +198,8 @@ export const Main = () => {
             ) : null
           )}
         </div>
+
+
       </div>
     </>
   );

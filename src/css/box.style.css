@@ -2,8 +2,8 @@
 
 /* 3x3에 그리드 설정 */
 .box-container {
-  width: 350px;
-  height: 350px;
+  width: 16vw;
+  height: 16vw;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(3,1fr);

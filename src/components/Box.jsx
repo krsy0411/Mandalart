@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "../css/box.style.css";
-
+// 
 export const Box = ({
   centerData,
   isActive,
