@@ -1,0 +1,41 @@
+.guide-container {
+    width: 1289px;
+    height: 617.65px;
+    position: relative;
+}
+
+.guide-container img {
+    width: 1289px;
+    height: 617.65px;
+}
+
+.guide-container .swiper-pagination {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.guide-container .swiper-pagination-bullet {
+    background: #FFFFFF !important;
+    width: 20px;
+    height: 20px;
+    margin: 40px;
+}
+
+.guide-container .swiper-button-prev,
+.guide-container .swiper-button-next {
+    background: var(--white-15, rgba(255, 255, 255, 0.15));
+    opacity: 1;
+    padding: 6px 15px;
+    border-radius: 50%;
+    color: #FFFFFF !important;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.guide-container .swiper-button-prev:after,
+.guide-container .swiper-button-next:after {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+}
