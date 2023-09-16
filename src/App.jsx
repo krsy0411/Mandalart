@@ -4,6 +4,7 @@ import { History } from "./views/History";
 import { Profile } from "./views/Profile";
 import { LogIn } from "./views/LogIn";
 import { SignUp } from "./views/SignUp";
+import "./css/app.style.css";
 import { RecoilRoot } from "recoil";
 
 function App() {

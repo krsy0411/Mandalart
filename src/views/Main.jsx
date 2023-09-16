@@ -20,6 +20,7 @@ export const Main = () => {
   const [isEditing, setIsEditing] = useState(null);
   const [tempData, setTempData] = useState({});
   const [modalVisible, setModalVisible] = useState(true);
+  // eslint-disable-next-line no-unused-vars
   const [isMain, setIsMain] = useState(true);
 
   const handleDataChange = (position, data) => {
