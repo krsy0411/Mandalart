@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import "./css/signup.style.css";
-import "./css/header.style.css";
+import "../css/signup.style.css";
+import "../css/header.style.css";
 
 export const SignUp = () => {
     const [name,setName]=useState("");
