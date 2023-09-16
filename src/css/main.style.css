@@ -107,6 +107,7 @@ p.logo {
     margin-right: 10px;
     font-size: 0.9rem;
     color: #333;
+    width: 20%;
 }
 
 .bar {
@@ -135,6 +136,7 @@ p.logo {
     top: 0;
     left: 0;
     height: 100%;
+    width: 0;
     background-color: #76c7c0; /* 원하는 색상으로 변경 */
     transition: width 0.5s; /* 부드러운 전환 효과를 위해 */
 }

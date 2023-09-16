@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Box } from "./components/Box";
 import "./css/main.style.css";
 
@@ -13,6 +13,7 @@ export const Main = () => {
     seven: "",
     eight: "",
   });
+
   const [isEditing, setIsEditing] = useState(null);
   const [tempData, setTempData] = useState({});
 
@@ -67,6 +68,29 @@ export const Main = () => {
     });
   }, []);
 
+  const [progressData, setProgressData] = useState({
+    one: 0,
+    two: 0,
+    three: 0,
+    four: 0,
+    five: 0,
+    six: 0,
+    seven: 0,
+    eight: 0,
+  });
+
+  useEffect(() => {
+    console.log("progressData changed", progressData);
+  }, [progressData]);
+
+  const handleProgressUpdate = (position, progress) => {
+    console.log("handleProgressUpdate called", { position, progress });
+    setProgressData((prev) => ({
+      ...prev,
+      [position]: progress,
+    }));
+  };
+
   return (
     <>
       {/* top: navbar section */}
@@ -83,7 +107,7 @@ export const Main = () => {
         {/* left: grid-container section */}
         <div className="grid-container">
           {positions.map((position, index) => {
-            if (index < 4) {
+            if (index !== 4) {
               return (
                 <Box
                   key={position}
@@ -92,6 +116,10 @@ export const Main = () => {
                   color={
                     mainTopicData[position] !== "" ? COLORS[index] : undefined
                   }
+                  onProgressUpdate={(position, progress) =>
+                    handleProgressUpdate(position, progress)
+                  }
+                  position={position}
                 />
               );
             }
@@ -130,17 +158,6 @@ export const Main = () => {
                 </div>
               );
             }
-
-            return (
-              <Box
-                key={position}
-                centerData={mainTopicData[position]}
-                isActive={mainTopicData[position] !== ""}
-                color={
-                  mainTopicData[position] !== "" ? COLORS[index] : undefined
-                }
-              />
-            );
           })}
         </div>
 
@@ -150,17 +167,18 @@ export const Main = () => {
             준혁님의 목표 달성률이에요. 조금만 더 힘내봐요 💪🏻
           </div>
           {Object.keys(mainTopicData).map((key, index) =>
-            index !== 8 ? ( // 9번째 항목(인덱스 8)를 무시
+            index !== 8 ? (
               <div key={index} className="progress-bar-container">
                 <span className="bar-text">
-                  {tempData[key] || "데이터 없음"} {/* 여기서 주제를 표시 */}
+                  {mainTopicData[key] || "데이터 없음"}
                 </span>
                 <div className="bar">
                   <div
                     className="progress-bar-fill"
-                    style={{ width: mainTopicData[key] ? "100%" : "0%" }}
+                    style={{ width: (progressData[key] ?? 0) + "%" }}
                   ></div>
                 </div>
+                {(progressData[index] ?? 0) + "%"}
               </div>
             ) : null
           )}
