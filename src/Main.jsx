@@ -178,7 +178,7 @@ export const Main = () => {
                     style={{ width: (progressData[key] ?? 0) + "%" }}
                   ></div>
                 </div>
-                {(progressData[index] ?? 0) + "%"}
+                {(progressData[key] ?? 0) + "%"}
               </div>
             ) : null
           )}
