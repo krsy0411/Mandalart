@@ -5,11 +5,12 @@
     height: 80px;
     overflow: hidden;
     border-radius: 20px;
-    background-color: #3A4D8F;
+    background-color: #FFF;
+    border: 1px solid black ;
     margin-bottom: 30px;
 
     &:hover {
-        background-color: #A1CAFE;
+        background-color: #3A4D8F;
     }
 }
 
@@ -21,11 +22,11 @@
     padding-left: 55px;
     font-size: 25px;
     font-weight: 550;
-    color: #FFF;
+    color: black;
 
     &:hover {
-        background-color: #A1CAFE;
-        color: black;
+        background-color: #3A4D8F;
+        color: #FFF;
     }
 
 }
@@ -35,5 +36,10 @@
     height: 80px;
     display: flex;
     align-items: center;
-    color: #FFF;
+    color: black;
+
+    &:hover {
+        background-color: #3A4D8F;
+        color: #FFF;
+    }
 }

@@ -50,6 +50,7 @@ export const Profile = () => {
                         type="password" 
                         onChange={(e)=>setConfirmPw(e.target.value)} 
                         value={confirmPw}/>
+                <div style={{textAlign:"center", marginTop:"60px"}}><button className="modify-profile">수정 완료</button></div>
             </div>
             <hr/>
         </>
