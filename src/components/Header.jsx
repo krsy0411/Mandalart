@@ -1,4 +1,5 @@
 import { useState} from "react";
+import { Link } from "react-router-dom";
 import { UserPopup } from "../components/UserPopup";
 import "../css/header.style.css";
 
@@ -9,7 +10,7 @@ export const Header = () => {
         <>
         <div className="header-header">
             {/*  로고 */}
-            <p className="header-logo">MANDARAT</p>
+            <Link to="/main"><p className="header-logo">MANDARAT</p></Link>
                 <div className="user-icon" onClick={() => {
                     setModalOpen(!modalOpen);
                 }}>

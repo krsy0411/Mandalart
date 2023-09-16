@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../css/login.style.css";
 import "../css/header.style.css";
 import KakaoLogo from "../assets/kakao.png"
@@ -41,7 +42,7 @@ export const LogIn = () => {
                     <p>OR</p>
                     <a className="kakao" href="https://kauth.kakao.com/oauth/authorize?client_id=66e775d4c6e22638c91bb9e4fb5e7e97&redirect_uri=http://27.96.135.222:8080/mandarat/user/add&response_type=code">
                         <img src={KakaoLogo} alt="kakao"/></a>
-                    <button className="signup-btn">회원가입</button>
+                    <Link to="/signup"><button className="signup-btn">회원가입</button></Link>
                 </div>
             </div>
             <hr/>
