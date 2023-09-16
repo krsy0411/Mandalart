@@ -13,8 +13,6 @@ function Modal({onClose, maskClosable, closable, visible}) {
     const VISITED_BEFORE_DATE = localStorage.getItem('VisitCookie');
     const VISITED_NOW_DATE = Math.floor(new Date().getDate());
 
-    localStorage.removeItem('VisitCookie')
-
     useEffect(() => {
         if (VISITED_BEFORE_DATE !== null) {
             if (VISITED_BEFORE_DATE === VISITED_NOW_DATE) {
@@ -27,24 +25,18 @@ function Modal({onClose, maskClosable, closable, visible}) {
         }
     }, [VISITED_BEFORE_DATE])
 
-    const Dayclose = (e) => {
+    const close = (e) => {
         if (onClose) {
             onClose(e)
             const expiry = new Date()
             const expiryDate = expiry.getDate() + 1
             localStorage.setItem('VisitCookie', expiryDate)
         }
-    }
-
-    const close = (e) => {
-        if (onClose) {
-            onClose(e)
-        }
     }    
 
     return(
         <>
-        <div className="modal-overlay"/>
+        <div className="modal-overlay" visible={visible}/>
         <div 
             className="modal-wrapper"
             onClick={maskClosable ? onMaskClick : null}

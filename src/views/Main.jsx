@@ -3,7 +3,8 @@ import { Box } from "../components/Box";
 import "../css/main.style.css";
 import { EditBtn } from "../components/EditBtn";
 import { Header } from "../components/Header";
-//
+import Modal from "../components/Modal";
+
 export const Main = () => {
   const [mainTopicData, setMainTopicData] = useState({
     one: "",
@@ -18,6 +19,7 @@ export const Main = () => {
   const [isClicked, setisClicked] = useState(false);
   const [isEditing, setIsEditing] = useState(null);
   const [tempData, setTempData] = useState({});
+  const [modalVisible, setModalVisible] = useState(true);
 
   const handleDataChange = (position, data) => {
     setMainTopicData((prev) => ({ ...prev, [position]: data }));
@@ -37,6 +39,10 @@ export const Main = () => {
   const handleBlur = (position) => {
     handleDataChange(position, tempData[position]);
     setIsEditing(null);
+  };
+
+  const closeModal = () => {
+    setModalVisible(false)
   };
 
   const positions = [
@@ -98,6 +104,12 @@ export const Main = () => {
     <>
       {/* top: navbar section */}
       <Header />
+
+      <div>
+            {modalVisible && (
+                <Modal visible={modalVisible} closable={true} maskClosable={true} onClose={closeModal}></Modal>
+            )}
+      </div>
 
       <div className="container">
         {/* 메인의 오른쪽 판 */}
