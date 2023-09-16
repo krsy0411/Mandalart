@@ -3,6 +3,11 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../css/signup.style.css";
 import "../css/header.style.css";
+import host from "../settings/host";
+
+export const apiClient = axios.create({
+  baseURL: host,
+});
 
 export const SignUp = () => {
   const navigate = useNavigate();
