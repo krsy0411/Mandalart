@@ -99,6 +99,12 @@ export const Main = () => {
       {/* top: navbar section */}
       <Header />
 
+      <div>
+            {modalVisible && (
+                <Modal visible={modalVisible} closable={true} maskClosable={true} onClose={closeModal}></Modal>
+            )}
+      </div>
+
       <div className="container">
         {/* 메인의 오른쪽 판 */}
         <div className="right-pane">
