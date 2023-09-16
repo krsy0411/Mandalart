@@ -111,7 +111,6 @@ export const Main = () => {
         {modalVisible && (
           <Modal
             visible={modalVisible}
-            closable={true}
             maskClosable={true}
             onClose={closeModal}
           ></Modal>

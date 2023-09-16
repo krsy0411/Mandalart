@@ -15,7 +15,7 @@ export const SignUp = () => {
         "http://27.96.135.222:8080/mandarat/user/add",
         {
           email: email,
-          password: pw,
+          passwd: pw,
           name: name,
         }
       );

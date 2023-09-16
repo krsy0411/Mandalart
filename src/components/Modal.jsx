@@ -2,13 +2,22 @@ import React, { useEffect } from "react";
 import Guide from "./Guide";
 import "../css/modal.style.css";
 import PropTypes from "prop-types";
+/*
+Modal.propTypes = {
+    visible: PropTypes.bool,
+};*/
 
-function Modal({ onClose, maskClosable, closable, visible }) {
-  const onMaskClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose(e);
+function Modal({ onClose, maskClosable, visible }) {
+
+    Modal.propTypes = {
+        visible: PropTypes.bool,
+    };
+
+    const onMaskClick = (e) => {
+        if (e.target === e.currentTarget) {
+        onClose(e);
     }
-  };
+    };
 
   const VISITED_BEFORE_DATE = localStorage.getItem("VisitCookie");
   const VISITED_NOW_DATE = Math.floor(new Date().getDate());
@@ -68,8 +77,6 @@ function Modal({ onClose, maskClosable, closable, visible }) {
   );
 }
 
-Modal.propTypes = {
-  visible: PropTypes.bool,
-};
+
 
 export default React.memo(Modal);
