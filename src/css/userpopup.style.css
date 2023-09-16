@@ -27,8 +27,8 @@
 .mypage-container .a {
     display: flex;
     align-items: center;
-    height: 40px;
-    /* border: 2px solid red; */
+    height: 44px;
+    /* border: 1px solid red; */
     padding-left: 16px;
     font-family: 'Pretendard', sans-serif;
     font-size: 16px;
@@ -36,6 +36,7 @@
 
     &:hover {
         background-color: rgba(102, 102, 102, 0.50);
+
     }
 }
 
@@ -51,4 +52,27 @@
 
 .custom-link {
     color:black;
+}
+
+.mypage-container .logout {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    /* border: 1px solid red; */
+    padding-left: 16px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FF5959;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+
+    &:hover {
+        background-color: rgba(102, 102, 102, 0.50);
+
+    }
+}
+
+.popup-icon{
+    margin-right: 5px;
 }

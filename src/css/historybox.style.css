@@ -1,24 +1,35 @@
 .historybox-container {
     width: 39.2vw;
-    height: 179px;
+    /* height: 179px; */
     background-color: #D9D9D9;
-    border-radius: 12px;
-    padding-left: 18px;
-    display: flex;
+    border-radius: 12px;;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around; */
     margin-bottom: 45px;
+    overflow: hidden;
 }
 
 .year {
+    height: 60px;
     font-family: 'Pretendard';
     font-size: 27px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    padding-top: 10px;
 }
 
 .basic-mandalart {
     display: flex;
     align-items: center;
+    height: 55px;
+    padding-left: 18px;
+
+    &:hover {
+        background-color: #929294;;
+    }
 }
 
 .main {
@@ -38,5 +49,14 @@
     font-family: 'Pretendard';
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+    height: 55px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    padding-left: 18px;
+
+    &:hover {
+        background-color: #929294;;
+    }
 }
