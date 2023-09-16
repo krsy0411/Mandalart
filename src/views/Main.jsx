@@ -16,7 +16,7 @@ export const Main = () => {
     seven: "",
     eight: "",
   });
-  const [isClicked, setisClicked] = useState(false);
+  
   const [isEditing, setIsEditing] = useState(null);
   const [tempData, setTempData] = useState({});
   const [modalVisible, setModalVisible] = useState(true);
@@ -174,7 +174,7 @@ export const Main = () => {
                               <span style={{ color: "#888" }}>
                                 {position === "center"
                                   ? "핵심 목표"
-                                  : `세부 목표 ${index + 1}`}
+                                  : `목표 ${index + 1}`}
                               </span>
                             )}
                           </i>
@@ -215,13 +215,28 @@ export const Main = () => {
               </>
             )}
           </div>
+          
           <div className="progress-intro-text">
-            준혁님의{" "}
-            {mainTopicData.center ? `'${mainTopicData.center}'에 대한` : ""}{" "}
-            목표 달성률이에요. <br />
-            {mainTopicData.center
-              ? "목표 달성을 위해 조금만 더 힘내봐요 💪🏻"
-              : "핵심 목표를 작성해주세요. ☺️"}
+            { isMain ? (
+              <>
+                준혁님의{" "}
+                {mainTopicData.center ? `'${mainTopicData.center}'에 대한` : ""}{" "}
+                목표 달성률이에요. <br />
+                {mainTopicData.center
+                  ? "목표 달성을 위해 조금만 더 힘내봐요 💪🏻"
+                  : "핵심 목표를 작성해주세요. ☺️"}
+              </>
+            ) : (
+              <>
+                준혁님의{" "}
+                {mainTopicData.center ? `'${mainTopicData.center}'에 대한` : ""}{" "}
+                목표 달성률이에요. <br />
+                {mainTopicData.center
+                  ? "목표 달성을 위해 조금만 더 힘내봐요 💪🏻"
+                  : "핵심 목표를 작성해주세요. ☺️"}
+              </>
+            ) }
+
           </div>
           {/* key값은  mainTopicData(대분류 하나 + 중분류 8개) index는 0-8*/}
           {Object.keys(mainTopicData).map((key, index) =>
@@ -231,13 +246,11 @@ export const Main = () => {
                 key={index}
                 className="progress-bar-container"
                 onClick={() => {
-                  // 클릭 여부 변경 : true <-> false(default == false)
-                  setisClicked(!isClicked);
+                  console.log()
                 }}
               >
-                {/* 만약 isClicked이 true가 아니면,  준혁님 코드로 / true면, 체크리스트 코드로*/}
                 <span className="bar-text">
-                  {mainTopicData[key] || `세부 목표 ${index + 1}`}
+                  {mainTopicData[key] || `목표 ${index + 1}`}
                 </span>
                 <div className="bar">
                   <div
