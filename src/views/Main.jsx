@@ -18,6 +18,7 @@ export const Main = () => {
   const [isClicked, setisClicked] = useState(false);
   const [isEditing, setIsEditing] = useState(null);
   const [tempData, setTempData] = useState({});
+  const [modalVisible, setModalVisible] = useState(true);
 
   const handleDataChange = (position, data) => {
     setMainTopicData((prev) => ({ ...prev, [position]: data }));
@@ -37,6 +38,10 @@ export const Main = () => {
   const handleBlur = (position) => {
     handleDataChange(position, tempData[position]);
     setIsEditing(null);
+  };
+
+  const closeModal = () => {
+    setModalVisible(false)
   };
 
   const positions = [
