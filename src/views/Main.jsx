@@ -20,6 +20,7 @@ export const Main = () => {
   const [isEditing, setIsEditing] = useState(null);
   const [tempData, setTempData] = useState({});
   const [modalVisible, setModalVisible] = useState(true);
+  // eslint-disable-next-line no-unused-vars
   const [isMain, setIsMain] = useState(true);
 
   const handleDataChange = (position, data) => {
@@ -191,7 +192,11 @@ export const Main = () => {
         {/* right: progress-bar section */}
         <div className="progress-bar-container-wrapper">
           <div className="main-or-sub">
-            {isMain ? <EditBtn btnText="중간 목표" iconId="fire"/> : <EditBtn btnText="세부 목표" iconId="fire"/>}
+            {isMain ? (
+              <EditBtn btnText="중간 목표" iconId="fire" />
+            ) : (
+              <EditBtn btnText="세부 목표" iconId="fire" />
+            )}
           </div>
           <div className="progress-intro-text">
             준혁님의{" "}
