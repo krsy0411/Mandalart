@@ -1,7 +1,7 @@
 import { HistoryBox } from "./components/HistoryBox";
 import "./css/history.style.css";
 import { Header } from "./components/Header";
-
+// 
 export const History = () => {
     return(
        <>

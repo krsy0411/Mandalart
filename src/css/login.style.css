@@ -1,0 +1,72 @@
+.login-container {
+    width: 70vw;
+    height: 600px;
+    background-color: #FAFCFF;
+    margin: auto;
+}
+
+.login-list {
+    font-family: 'Pretendard';
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.login-input {
+    width: 54.5vw;
+    height: 63px;
+    border-radius: 10.088px;
+    background-color: #D9D9D9;
+    margin-bottom: 35px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.login-btn {
+    text-align: center;
+}
+
+.login-btn button {
+    width: 213px;
+    height: 57px;
+    background-color:  #A1CAFE;
+    border-radius: 10.088px;
+    margin-top: 20px;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.login-btn .kakao {
+    font-size: 15px;
+    margin-top: 7px;
+    font-weight: 500;
+}
+
+.login-inputbox {
+    width: 54.5vw;
+    margin: auto;
+}
+
+.login-container .text {
+    font-family: 'Pretendard';
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 50px;
+}
+
+.login-container .signup-btn {
+    font-family: 'Pretendard';
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.50);
+    margin-top: 60px;
+    font-weight: 500;
+}
+
+hr {
+    color: #F6F6F6;
+    border: none;
+    height: 50px;
+}
+

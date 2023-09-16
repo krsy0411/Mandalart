@@ -2,7 +2,7 @@
 /* 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
-
+/*  */
 /* 모든 프론트에서 공통적으로 사용하는 부분만 여기에 작성합니다 */
 :root {
   --light-blue: #a1caff;

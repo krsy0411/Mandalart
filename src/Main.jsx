@@ -1,9 +1,9 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { Box } from "./components/Box";
 import "./css/main.style.css";
 import { EditBtn } from "./components/EditBtn";
 import { Header } from "./components/Header";
-
+//
 export const Main = () => {
   const [mainTopicData, setMainTopicData] = useState({
     one: "",
@@ -15,6 +15,7 @@ export const Main = () => {
     seven: "",
     eight: "",
   });
+  const [isClicked, setisClicked] = useState(false);
   const [isEditing, setIsEditing] = useState(null);
   const [tempData, setTempData] = useState({});
 
@@ -177,10 +178,19 @@ export const Main = () => {
               ? "목표 달성을 위해 조금만 더 힘내봐요 💪🏻"
               : "핵심 목표를 작성해주세요. ☺️"}
           </div>
-
+          {/* key값은  mainTopicData(대분류 하나 + 중분류 8개) index는 0-8*/}
           {Object.keys(mainTopicData).map((key, index) =>
             index !== 8 ? (
-              <div key={index} className="progress-bar-container">
+              // 게이지바 부분
+              <div
+                key={index}
+                className="progress-bar-container"
+                onClick={() => {
+                  // 클릭 여부 변경 : true <-> false(default == false)
+                  setisClicked(!isClicked);
+                }}
+              >
+                {/* 만약 isClicked이 true가 아니면,  준혁님 코드로 / true면, 체크리스트 코드로*/}
                 <span className="bar-text">
                   {mainTopicData[key] || `세부 목표 ${index + 1}`}
                 </span>
