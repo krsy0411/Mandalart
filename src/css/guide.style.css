@@ -1,12 +1,12 @@
 .guide-container {
     width: 1289px;
-    height: 617.65px;
+    height: 555px;
     position: relative;
 }
 
 .guide-container img {
     width: 1289px;
-    height: 617.65px;
+    height: 555px;
 }
 
 .guide-container .swiper-pagination {
@@ -16,19 +16,24 @@
 }
 
 .guide-container .swiper-pagination-bullet {
-    background: #FFFFFF !important;
+    background: #E4E4E4 !important;
     width: 20px;
     height: 20px;
     margin: 40px;
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+}
+
+.guide-container .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #A1CAFE !important;
 }
 
 .guide-container .swiper-button-prev,
 .guide-container .swiper-button-next {
-    background: var(--white-15, rgba(255, 255, 255, 0.15));
-    opacity: 1;
+    width: 27px;
+    height: 53px;
     padding: 6px 15px;
     border-radius: 50%;
-    color: #FFFFFF !important;
+    color: #000000 !important;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 50px;
@@ -38,4 +43,10 @@
 .guide-container .swiper-button-next:after {
     font-size: 24px !important;
     font-weight: 600 !important;
+}
+
+.guide-container .swiper-button-prev.swiper-button-disabled, 
+.guide-container .swiper-button-next.swiper-button-disabled {
+    display: none !important;
+    pointer-events: none;
 }
