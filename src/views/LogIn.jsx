@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../css/login.style.css";
 import "../css/header.style.css";
+import KakaoLogo from "../assets/kakao.png"
 
 export const LogIn = () => {
     const [email,setEmail]=useState('');
@@ -35,11 +36,12 @@ export const LogIn = () => {
                             value={pw}/>
                 </div>
 
-                <div className="login-btn">
-                    <button>로그인</button>
-                    <div className="kakao">OR</div>
-                    <div className="kakao">카카오톡으로 계속하기</div>
-                    <div className="signup-btn">회원가입</div>
+                <div className="button-container">
+                    <button className="login-btn">로그인</button>
+                    <p>OR</p>
+                    <a className="kakao" href="https://kauth.kakao.com/oauth/authorize?client_id=66e775d4c6e22638c91bb9e4fb5e7e97&redirect_uri=http://27.96.135.222:8080/mandarat/user/add&response_type=code">
+                        <img src={KakaoLogo} alt="kakao"/></a>
+                    <button className="signup-btn">회원가입</button>
                 </div>
             </div>
             <hr/>
