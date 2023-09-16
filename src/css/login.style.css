@@ -11,13 +11,13 @@
 }
 
 .login-input {
-    width: 502px;
+    width: 493px;
     height: 63px;
     border-radius: 10.088px;
     background-color: #D9D9D9;
     margin-bottom: 20px;
     font-size: 25.22px;
-    padding-left: 20px;
+    padding : 0 0 0 10px;
 }
 
 .button-container {
@@ -46,12 +46,6 @@
     font-weight: 500;
 }
 
-.button-container .kakao {
-    font-size: 15px;
-    margin-top: 7px;
-    font-weight: 500;
-}
-
 .login-inputbox {
     width: 502px;
     margin: auto;
@@ -72,7 +66,7 @@
     background-color:  #FFFFFF;
     border-radius: 10.088px;
     border: 1px solid #000000;
-    margin-top: 50px;
+    margin-top: 30px;
     font-family: 'Pretendard';
     font-size: 23px;
     font-weight: 540;
