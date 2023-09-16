@@ -3,7 +3,8 @@ import { Box } from "../components/Box";
 import "../css/main.style.css";
 import { EditBtn } from "../components/EditBtn";
 import { Header } from "../components/Header";
-//
+import Modal from "../components/Modal";
+
 export const Main = () => {
   const [mainTopicData, setMainTopicData] = useState({
     one: "",
