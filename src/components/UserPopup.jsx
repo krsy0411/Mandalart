@@ -10,6 +10,7 @@ export const UserPopup = (props) => {
     const navigate=useNavigate();
 
     const goHome = ()=> {
+        window.localStorage.removeItem("is_login");
         navigate('/');
         alert("로그아웃 되었습니다.")
     }
