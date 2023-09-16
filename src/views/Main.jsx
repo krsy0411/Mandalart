@@ -121,7 +121,8 @@ export const Main = () => {
         <div className="right-pane">
           {/* 메인의 오른쪽 헤더 영역 */}
           <div className="right-pane-header">
-            <EditBtn />
+            <EditBtn btnText="현재 만다라트 초기화" iconId="pen" />
+            <EditBtn btnText="데이터 저장" iconId="floppy-disk" />
           </div>
           {/* left: grid-container section */}
           <div className="grid-container">
@@ -218,7 +219,9 @@ export const Main = () => {
                     style={{ width: (progressData[key] ?? 0) + "%" }}
                   ></div>
                 </div>
-                {(progressData[key] ?? 0) + "%"}
+                <div className="percentage">
+                  {(progressData[key] ?? 0) + "%"}
+                </div>
               </div>
             ) : null
           )}

@@ -17,8 +17,9 @@
   justify-content: center;
   align-items: center;
   /* 박스 나갈만큼 길면 줄바꿈 처리 */
-  flex-wrap: wrap;
-  /* 폰트 세부 설정 */
+  white-space: pre-wrap;
+  word-break: break-word;
+    /* 폰트 세부 설정 */
   font-weight: 400;
   /* 테두리 설정 */
   border: 1px dashed var(--grey);
@@ -28,6 +29,10 @@
   position: relative;
 }
 
+.center {
+  font-family: 'Pretendard-Bold';
+}
+
 .box.inactive {
   background-color: black;
   opacity: 0.3;
@@ -35,19 +40,19 @@
 }
 
 .box.completed {
-  opacity: 0.5; /* 폰트를 흐리게 만듭니다. 이 값은 조절할 수 있습니다. */
+  opacity: 0.5;
 }
 
 .box.completed::after {
   content: '';
-  background-image: url('../assets/Success.png'); /* 아이콘 경로를 수정했습니다. */
-  background-size: 100% 100%; /* 아이콘의 크기를 조절합니다. */
+  background-image: url('../assets/Success.png');
+  background-size: 100% 100%;
   background-repeat: no-repeat; 
-  background-position: center; /* 배경 이미지의 위치를 중앙으로 설정합니다. */
+  background-position: center;
   position: absolute;
-  top: 50%; /* 위치를 상자의 중앙으로 설정합니다. */
-  left: 50%; /* 위치를 상자의 중앙으로 설정합니다. */
-  width: 100%; /* 아이콘의 크기를 조절합니다. */
-  height: 100%; /* 아이콘의 크기를 조절합니다. */
-  transform: translate(-50%, -50%); /* 중앙 정렬을 위해 translate를 사용합니다. */
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
 }

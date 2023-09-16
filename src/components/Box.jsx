@@ -14,7 +14,7 @@ export const Box = ({
   const handleTextChange = (index, text) => {
     setBoxTexts((prev) => {
       const newTexts = [...prev];
-      newTexts[index] = text;
+      newTexts[index] = text.length > 30 ? text.substring(0, 30) + "..." : text;
       return newTexts;
     });
   };
@@ -51,7 +51,13 @@ export const Box = ({
           contentEditable={isActive && index !== 4}
           suppressContentEditableWarning
           onBlur={(e) => handleTextChange(index, e.target.textContent)}
-          onContextMenu={(e) => handleRightClick(index, e)}
+          onContextMenu={(e) => {
+            if (index === 4 || boxTexts[index] === "") {
+              e.preventDefault();
+              return;
+            }
+            handleRightClick(index, e);
+          }}
         >
           {index === 4 ? centerData : boxTexts[index]}
         </div>
