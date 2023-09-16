@@ -6,25 +6,6 @@
     font-weight: 400;
     font-style: normal;
 }
-
-.user-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-
-    &:hover {
-        transition: 1s;
-        background-color: var(--purple);
-    }
-}
-.user-icon i {
-    scale: 1.8;
-}
 /* 오른쪽-왼쪽 판 설정 */
 .container {
     font-family: "Pretendard-Regular";

@@ -28,3 +28,21 @@
         color: var(--purple);
     }
 }
+.user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    &:hover {
+        transition: 1s;
+        background-color: var(--purple);
+    }
+}
+.user-icon i {
+    scale: 1.8;
+}
