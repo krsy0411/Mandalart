@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "../css/box.style.css";
-// 
+//
 export const Box = ({
   centerData,
   isActive,
@@ -36,6 +36,7 @@ export const Box = ({
   useEffect(() => {
     const newProgress = (completedIndexes.length / 8) * 100;
     onProgressUpdate(position, newProgress);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [completedIndexes, position]);
 
   return (

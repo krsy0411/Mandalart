@@ -20,7 +20,7 @@
     height: inherit;
     /* header영역 아래 grid-container 쌓이게끔 배치 */
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     position: relative;
     top: 0px;
 }
@@ -56,7 +56,7 @@
     display: flex;
     flex-direction: column;
     width: min-content;
-    align-items: end;
+    align-items: flex-end;
     /* 살짝 아래로 내리기 */
     position: relative;
     top: 45px;

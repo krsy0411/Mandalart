@@ -42,7 +42,7 @@ export const Main = () => {
   };
 
   const closeModal = () => {
-    setModalVisible(false)
+    setModalVisible(false);
   };
 
   const positions = [
@@ -106,9 +106,14 @@ export const Main = () => {
       <Header />
 
       <div>
-            {modalVisible && (
-                <Modal visible={modalVisible} closable={true} maskClosable={true} onClose={closeModal}></Modal>
-            )}
+        {modalVisible && (
+          <Modal
+            visible={modalVisible}
+            closable={true}
+            maskClosable={true}
+            onClose={closeModal}
+          ></Modal>
+        )}
       </div>
 
       <div className="container">
@@ -120,6 +125,7 @@ export const Main = () => {
           </div>
           {/* left: grid-container section */}
           <div className="grid-container">
+            {/* eslint-disable-next-line array-callback-return */}
             {positions.map((position, index) => {
               if (index !== 4) {
                 return (
