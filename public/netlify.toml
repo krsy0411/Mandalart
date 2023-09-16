@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/mandarat/*"
+  to = "http://27.96.135.222:8080/:splat"
+  status = 200
+  force = true
