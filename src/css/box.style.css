@@ -2,8 +2,8 @@
 
 /* 3x3에 그리드 설정 */
 .box-container {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(3,1fr);
@@ -24,8 +24,30 @@
   border: 1px dashed var(--grey);
 }
 
+.box {
+  position: relative;
+}
+
 .box.inactive {
   background-color: black;
   opacity: 0.3;
   overflow-wrap: break-word;
+}
+
+.box.completed {
+  opacity: 0.5; /* 폰트를 흐리게 만듭니다. 이 값은 조절할 수 있습니다. */
+}
+
+.box.completed::after {
+  content: '';
+  background-image: url('../assets/Success.png'); /* 아이콘 경로를 수정했습니다. */
+  background-size: 100% 100%; /* 아이콘의 크기를 조절합니다. */
+  background-repeat: no-repeat; 
+  background-position: center; /* 배경 이미지의 위치를 중앙으로 설정합니다. */
+  position: absolute;
+  top: 50%; /* 위치를 상자의 중앙으로 설정합니다. */
+  left: 50%; /* 위치를 상자의 중앙으로 설정합니다. */
+  width: 100%; /* 아이콘의 크기를 조절합니다. */
+  height: 100%; /* 아이콘의 크기를 조절합니다. */
+  transform: translate(-50%, -50%); /* 중앙 정렬을 위해 translate를 사용합니다. */
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Box } from "./components/Box";
 import "./css/main.style.css";
 import { EditBtn } from "./components/EditBtn";
@@ -107,22 +107,22 @@ export const Main = () => {
           {/* left: grid-container section */}
           <div className="grid-container">
             {positions.map((position, index) => {
-            if (index !== 4) {
-              return (
-                <Box
-                  key={position}
-                  centerData={mainTopicData[position]}
-                  isActive={mainTopicData[position] !== ""}
-                  color={
-                    mainTopicData[position] !== "" ? COLORS[index] : undefined
-                  }
-                  onProgressUpdate={(position, progress) =>
-                    handleProgressUpdate(position, progress)
-                  }
-                  position={position}
-                />
-              );
-            }
+              if (index !== 4) {
+                return (
+                  <Box
+                    key={position}
+                    centerData={mainTopicData[position]}
+                    isActive={mainTopicData[position] !== ""}
+                    color={
+                      mainTopicData[position] !== "" ? COLORS[index] : undefined
+                    }
+                    onProgressUpdate={(position, progress) =>
+                      handleProgressUpdate(position, progress)
+                    }
+                    position={position}
+                  />
+                );
+              }
 
               if (index === 4) {
                 return (
@@ -158,7 +158,6 @@ export const Main = () => {
                   </div>
                 );
               }
-
             })}
           </div>
         </div>
@@ -180,12 +179,11 @@ export const Main = () => {
                     style={{ width: (progressData[key] ?? 0) + "%" }}
                   ></div>
                 </div>
-                {(progressData[index] ?? 0) + "%"}
+                {(progressData[key] ?? 0) + "%"}
               </div>
             ) : null
           )}
         </div>
-
       </div>
     </>
   );
