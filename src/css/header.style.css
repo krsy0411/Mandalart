@@ -40,7 +40,7 @@
 
     &:hover {
         transition: 1s;
-        background-color: var(--purple);
+        background-color: #A1CAFE;
     }
 }
 .user-icon i {

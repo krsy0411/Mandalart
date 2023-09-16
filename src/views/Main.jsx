@@ -193,9 +193,27 @@ export const Main = () => {
         <div className="progress-bar-container-wrapper">
           <div className="main-or-sub">
             {isMain ? (
-              <EditBtn btnText="중간 목표" iconId="fire" />
+              <>
+                <div className="edit-container" onClick={() => {setIsMain(!isMain)}}>
+                  <div className="edit-icon-wrapper-container">
+                    <div className="edit-icon-wrapper">
+                        <i className='fas fa-fire'></i>
+                    </div>
+                    <p className="edit-p">세부 목표</p>
+                  </div>
+                </div>  
+              </>
             ) : (
-              <EditBtn btnText="세부 목표" iconId="fire" />
+              <>
+                <div className="edit-container" onClick={() => {setIsMain(!isMain)}}>
+                  <div className="edit-icon-wrapper-container">
+                    <div className="edit-icon-wrapper">
+                        <i className='fas fa-fire'></i>
+                    </div>
+                    <p className="edit-p">중간 목표</p>
+                  </div>
+                </div>  
+              </>
             )}
           </div>
           <div className="progress-intro-text">
