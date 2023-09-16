@@ -6,6 +6,13 @@ export const LogIn = () => {
     const [email,setEmail]=useState('');
     const [pw,setPw]=useState("");
 
+    const movePage = useNavigate();
+
+    useEffect(() => {
+        if (window.localStorage.getItem("is_login") === "true")
+            movePage("/");
+    })
+
     return (
         <>
             <style>
