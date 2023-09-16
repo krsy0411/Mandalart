@@ -3,11 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../css/signup.style.css";
 import "../css/header.style.css";
-import host from "../settings/host";
-
-export const apiClient = axios.create({
-  baseURL: host,
-});
 
 export const SignUp = () => {
   const navigate = useNavigate();
@@ -17,7 +12,7 @@ export const SignUp = () => {
 
     try {
       const response = await axios.post(
-        "http://27.96.135.222:8080/mandarat/user/add",
+        "https://27.96.135.222:443/mandarat/user/add",
         {
           email: email,
           passwd: pw,
