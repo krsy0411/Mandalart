@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import "./css/profile.style.css";
-import logo from './assets/MANDARAT.png';
-import user from './assets/person.png';
-import { UserPopup } from "./components/UserPopup";
+import { Header } from "./components/Header";
 
 export const Profile = () => {
-    const [modalOpen, setModalOpen]=useState(false);
     const [name,setName]=useState('홍길동');
     const [pw,setPw]=useState("1234");
     const [confirmPw,setConfirmPw]=useState("1234");
@@ -29,11 +26,7 @@ export const Profile = () => {
                         background-color: #F6F6F6;
                     }`}
             </style>
-            <div className="header">
-                <img className='logo' src={logo} alt="logo"/>
-                <img className='user-icon' src={user} alt="user"  onClick={()=>setModalOpen(!modalOpen)}/>
-            </div>
-            {modalOpen && <UserPopup value={modalOpen}/>}
+            <Header/>
             <div className="profile-container">
                 <div className="user-img"><img src="http://via.placeholder.com/175" alt="이미지"/></div>
 
