@@ -1,49 +1,59 @@
 .login-container {
-    width: 70vw;
-    height: 600px;
-    background-color: #FAFCFF;
+    width: 700px;
+    height: 800px;
     margin: auto;
 }
 
 .login-list {
     font-family: 'Pretendard';
-    font-size: 20px;
+    font-size: 25.22px;
     margin-bottom: 5px;
 }
 
 .login-input {
-    width: 54.5vw;
+    width: 502px;
     height: 63px;
     border-radius: 10.088px;
     background-color: #D9D9D9;
-    margin-bottom: 35px;
-    font-size: 20px;
+    margin-bottom: 20px;
+    font-size: 25.22px;
     padding-left: 20px;
 }
 
-.login-btn {
+.button-container {
     text-align: center;
 }
 
-.login-btn button {
-    width: 213px;
+.button-container .login-btn {
+    width: 502px;
     height: 57px;
     background-color:  #A1CAFE;
     border-radius: 10.088px;
+    border: 1px solid #000000;
     margin-top: 20px;
     font-family: 'Pretendard';
-    font-size: 20px;
+    font-size: 23px;
+    font-weight: 540;
+}
+
+.login-btn:hover {
+    background-color: #3A4D8F;
+    color: #FFFFFF;
+}
+
+.button-container p {
+    font-size: 18.05px;
     font-weight: 500;
 }
 
-.login-btn .kakao {
+.button-container .kakao {
     font-size: 15px;
     margin-top: 7px;
     font-weight: 500;
 }
 
 .login-inputbox {
-    width: 54.5vw;
+    width: 502px;
     margin: auto;
 }
 
@@ -56,12 +66,16 @@
     margin-bottom: 50px;
 }
 
-.login-container .signup-btn {
+.button-container .signup-btn {
+    width: 502px;
+    height: 57px;
+    background-color:  #FFFFFF;
+    border-radius: 10.088px;
+    border: 1px solid #000000;
+    margin-top: 50px;
     font-family: 'Pretendard';
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.50);
-    margin-top: 60px;
-    font-weight: 500;
+    font-size: 23px;
+    font-weight: 540;
 }
 
 hr {
