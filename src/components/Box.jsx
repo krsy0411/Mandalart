@@ -35,7 +35,6 @@ export const Box = ({
 
   useEffect(() => {
     const newProgress = (completedIndexes.length / 8) * 100;
-    console.log("newProgress calculated: ", newProgress); // 로깅 추가
     onProgressUpdate(position, newProgress);
   }, [completedIndexes, position]);
 

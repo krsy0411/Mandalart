@@ -3,7 +3,7 @@ import { Box } from "./components/Box";
 import "./css/main.style.css";
 import { EditBtn } from "./components/EditBtn";
 import { Header } from "./components/Header";
-// 
+//
 export const Main = () => {
   const [mainTopicData, setMainTopicData] = useState({
     one: "",
@@ -24,6 +24,12 @@ export const Main = () => {
   };
 
   const handleEdit = (position) => {
+    if (position !== "center" && mainTopicData["center"] === undefined) {
+      // center가 비어있는데 다른 position을 편집하려 할 때
+      alert("세부 목표를 작성하기 전 먼저 핵심 목표를 입력해주세요.");
+      return;
+    }
+
     setIsEditing(position);
     setTempData((prev) => ({ ...prev, [position]: mainTopicData[position] }));
   };
@@ -81,12 +87,7 @@ export const Main = () => {
     eight: 0,
   });
 
-  useEffect(() => {
-    console.log("progressData changed", progressData);
-  }, [progressData]);
-
   const handleProgressUpdate = (position, progress) => {
-    console.log("handleProgressUpdate called", { position, progress });
     setProgressData((prev) => ({
       ...prev,
       [position]: progress,
@@ -150,7 +151,11 @@ export const Main = () => {
                         ) : (
                           <i onClick={() => handleEdit(position)}>
                             {tempData[position] || (
-                              <span style={{ color: "#888" }}>데이터 입력</span>
+                              <span style={{ color: "#888" }}>
+                                {position === "center"
+                                  ? "핵심 목표"
+                                  : `세부 목표 ${index + 1}`}
+                              </span>
                             )}
                           </i>
                         )}
@@ -166,19 +171,28 @@ export const Main = () => {
         {/* right: progress-bar section */}
         <div className="progress-bar-container-wrapper">
           <div className="progress-intro-text">
-            준혁님의 목표 달성률이에요. 조금만 더 힘내봐요 💪🏻
+            준혁님의{" "}
+            {mainTopicData.center ? `'${mainTopicData.center}'에 대한` : ""}{" "}
+            목표 달성률이에요. <br />
+            {mainTopicData.center
+              ? "목표 달성을 위해 조금만 더 힘내봐요 💪🏻"
+              : "핵심 목표를 작성해주세요. ☺️"}
           </div>
           {/* key값은  mainTopicData(대분류 하나 + 중분류 8개) index는 0-8*/}
           {Object.keys(mainTopicData).map((key, index) =>
             index !== 8 ? (
               // 게이지바 부분
-              <div key={index} className="progress-bar-container" onClick={() => {
-                // 클릭 여부 변경 : true <-> false(default == false)
-                setisClicked(!isClicked);
-              }}>
+              <div
+                key={index}
+                className="progress-bar-container"
+                onClick={() => {
+                  // 클릭 여부 변경 : true <-> false(default == false)
+                  setisClicked(!isClicked);
+                }}
+              >
                 {/* 만약 isClicked이 true가 아니면,  준혁님 코드로 / true면, 체크리스트 코드로*/}
                 <span className="bar-text">
-                  {mainTopicData[key] || "데이터 없음"}
+                  {mainTopicData[key] || `세부 목표 ${index + 1}`}
                 </span>
                 <div className="bar">
                   <div
@@ -191,8 +205,6 @@ export const Main = () => {
             ) : null
           )}
         </div>
-
-
       </div>
     </>
   );

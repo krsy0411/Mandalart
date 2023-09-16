@@ -66,12 +66,13 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-self: center;
-    margin-top: 20px;
+    margin-top: 35px;
     margin-bottom: 35px;
     font-size: 23px;
     font-weight: 700;
+    line-height: 130%;
 }
 
 .bar-text {
@@ -97,7 +98,7 @@
     height: 75px;
     border-radius: 40px;
     overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
     padding: 0 10px; 
 }
