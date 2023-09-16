@@ -6,8 +6,8 @@
     border: 2px solid var(--text, #332B3A);
 
     position: absolute;
-    top: 80px; 
-    right: 20px; 
+    top: 105px; 
+    right: 95px; 
     z-index: 9999;
 }
 
